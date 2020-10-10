@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuborg Nul Grp.11</title>
+    <title>Tuborg Nul Gruppe 11</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-   <h1>Tuborg Nul</h1>
+    <header>
+
+        <nav>
+            <!-------Burgermenu på mobil ------>
+            <div id="menuknap">☰</div>
+
+            <ul id="menu" class="hidden">
+                <li class="info_klikmig_menu">Viden om kampagnen</li>
+                <li class="quiz_klikmig_menu">Klik dig klogere...</li>
+                <li class="infografik_klikmig_menu">Infografik</li>
+                <li>Videoportfolio</li>
+            </ul>
+        </nav>
+
+    </header>
+    <section id="baggrundsvideo">
+        <!--
+           <video poster="img/poster.png" autoplay="" muted="" loop="">
+            <source src="img/splash.mp4" type="video/mp4">
+        </video>
+-->
+        <h1 id="videotekst">#KNAPOPFORMULIGHEDERNE</h1>
+
+        <div id="scroll">scroll</div>
+    </section>
+
+    <section id="popup_info">
+        <article>
+            <button id="luk_info">x</button>
+        </article>
+    </section>
+    <section id="popup_quiz">
+        <article>
+            <button id="luk_quiz">x</button>
+        </article>
+    </section>
+    <section id="popup_infografik">
+        <article>
+            <button id="luk_infografik">x</button>
+        </article>
+    </section>
+
+    <main>
+
+        <div id="info" class="info_klikmig">
+            <h1>Viden om kampagnen</h1>
+        </div>
+
+        <div id="quiz" class="quiz_klikmig">
+            <h1>Klik dig klogere...</h1>
+        </div>
+
+        <div id="infografik" class="infografik_klikmig">
+            <h1>Nice grafik her</h1>
+        </div>
+
+        <div id="soMe">
+            <div id="fb"></div>
+            <div id="ig"></div>
+        </div>
+
+
+    </main>
+    <footer>
+        <h1>TUBORG</h1>
+    </footer>
     <script src="js/script.js"></script>
-</body>
-</html>
+</body></html>
