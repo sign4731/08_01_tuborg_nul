@@ -15,6 +15,7 @@ function sidenVises() {
     document.querySelector("#luk_infografik").addEventListener("click", () => popup_infografik.style.display = "none");
 
     //menuknap
+    document.querySelector("#menuknap").innerHTML = "<img src='/pics/burgermenu.svg' alt='burgermenu'/>";
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 }
 
@@ -26,9 +27,9 @@ function toggleMenu() {
     let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
     if (erSkjult == true) {
-        document.querySelector("#menuknap").textContent = "☰";
+        document.querySelector("#menuknap").innerHTML = "<img src='/pics/burgermenu.svg' alt='burgermenu'/>";
     } else {
-        document.querySelector("#menuknap").textContent = "x";
+        document.querySelector("#menuknap").innerHTML = "<img src='/pics/burgermenuLuk.svg' alt='burgermenu'/>";
     }
 
 }
