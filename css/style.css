@@ -191,10 +191,10 @@ header {
 
 #line {
     border-left: 2px solid white;
-    height: 250px;
+    height: 150px;
     position: absolute;
     left: 50vw;
-    top: 100px;
+    top: 70px;
 }
 
 
