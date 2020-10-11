@@ -12,7 +12,7 @@
 
 
 body {
-    font-family: '';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: #E7E7E5;
     margin: 0;
@@ -34,7 +34,7 @@ img {
 }
 
 h1 {
-    font-family: 'Tuborg Serif';
+    font-family: 'Roboto', sans-serif;
     font-style: Extra-bold;
     font-weight: 500;
     color: #000;
@@ -52,7 +52,7 @@ h2 {
 
 p {
     font-weight: 400;
-    font-family: '';
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
@@ -60,12 +60,14 @@ a {
     text-decoration: none;
 }
 
+
 /**********************HEADER*****************************/
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 2;
 }
 
 #menu {
@@ -97,6 +99,15 @@ header {
     cursor: pointer;
 }
 
+#logo {
+    display: none;
+    font-size: 50px;
+    color: #1C4D8C;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 20px;
+
+}
+
 .hidden {
     transform: translateX(310px);
 }
@@ -113,6 +124,7 @@ header {
     height: 100vh;
     background-color: rgba(28, 77, 140, 0.55);
     display: none;
+    z-index: 1;
 }
 
 #popup_info article,
@@ -154,6 +166,17 @@ header {
     padding-top: 50vh;
     color: white;
     font-weight: bold;
+    visibility: hidden;
+}
+
+#gradient {
+    width: 100vw;
+    height: 30vh;
+    background-image: linear-gradient(rgba(231, 231, 229, 0), #E7E7E5);
+    z-index: 1;
+    position: relative;
+    bottom: 24px;
+
 }
 
 #scroll {
@@ -162,8 +185,16 @@ header {
     margin-top: 20vh;
     margin-left: 40vw;
     font-size: 30px;
-    font-family: 'Tuborg Serif';
+    font-family: 'Roboto', sans-serif;
     color: white;
+}
+
+#line {
+    border-left: 2px solid white;
+    height: 250px;
+    position: absolute;
+    left: 50vw;
+    top: 100px;
 }
 
 
@@ -247,6 +278,103 @@ header {
 footer h1 {
     font-size: 50px;
     color: #1C4D8C;
-    text-align-last: center;
+    text-align: center;
     margin: 50px 50px;
+}
+
+/********************MEDIAQUERIES*****************/
+
+/*************IPAD***********/
+@media(min-width: 768px) {
+
+
+    /**TOP**/
+    #menuknap {
+        font-size: 70px;
+    }
+
+    #scroll {
+        margin-left: 45vw;
+        top: 130px;
+        position: relative;
+    }
+
+    #line {
+        height: 150px;
+        top: 200px;
+    }
+
+    /**MAIN**/
+    main {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, minmax(379px, 1fr));
+        padding-top: 85px;
+        max-width: 768px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #info {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        width: 379px;
+        height: 610px;
+    }
+
+    #quiz {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 379px;
+    }
+
+    #infografik {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        width: 379px;
+    }
+
+    #soMe {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        width: 768px;
+    }
+}
+
+/***********WEB***************/
+@media(min-width: 1024px) {
+
+    /**MENU**/
+    #menuknap {
+        display: none;
+    }
+
+    #menu {
+        flex-direction: row;
+        transform: translateX(0);
+        top: 20px;
+    }
+
+    #menu li {
+        font-size: 16px;
+        margin-top: 0px;
+        padding: 0 10px;
+    }
+
+    #logo {
+        display: block;
+    }
+
+    /**SCROLL**/
+
+    #scroll {
+        top: 50px;
+        margin-left: 47.5vw;
+    }
+
+    #line {
+        top: 100px;
+        height: 150px;
+    }
+
 }
