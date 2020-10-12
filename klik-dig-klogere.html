@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>klik dig klogere</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    .vl {
+        border-left: 2px solid black;
+        height: 70px;
+    }
+
+    #popup-quiz {
+        font-family: sans-serif;
+        overflow: scroll;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -47.5vh 0 0 -47.5vw;
+        height: 95vh;
+        width: 95vw;
+        background-color: #253d80;
+        padding: 40px 0;
+
+    }
+
+    #popup-quiz h1 {
+        color: white;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    #popup-quiz h2 {
+        margin: 30px 0;
+        color: white;
+        text-align: center;
+        font-weight: 100;
+    }
+
+    button {
+        display: block;
+    }
+
+    #popup-quiz button {
+        background: #3456b5;
+        border: solid 2px white;
+        width: 300px;
+        height: 40px;
+        margin-top: 10px;
+        color: white;
+    }
+
+    #popup-quiz .container {
+        display: grid;
+        justify-items: center;
+        margin: 80px 10px 25px 10px;
+    }
+
+
+
+    @media screen and (min-width: 1200px) {
+        button {
+            display: inline;
+        }
+    }
+
+
+
+
+    /*key frame animatiomns*/
+
+    @keyframes shake_kf {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        10% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+        }
+
+        20% {
+            transform: translate(-3px, 0px) rotate(1deg);
+        }
+
+        30% {
+            transform: translate(3px, 2px) rotate(0deg);
+        }
+
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(1px, -2px) rotate(0deg);
+        }
+    }
+
+    .ryst {
+        animation-name: shake_kf;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: none;
+
+
+    }
+
+</style>
+
+<body>
+
+    <div id="popup-quiz">
+        <h1>Klik dig klogere</h1>
+        <div class="container">
+            <img src="svg/dotted-line.svg" alt="linje" height="100px">
+            <img src="svg/penge.svg" alt="ikon" height="100px" width="100px">
+            <h2>Hvor mange procent er salget af alkohol fri øl steget fri 2015 til 2019?</h2>
+            <div class="knapper">
+                <button id="rigtigt1">91%</button>
+                <button id="forkert9">32%</button>
+                <button id="forkert10">118%</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="svg/dotted-line.svg" alt="linje" height="100px">
+            <img src="svg/procent.svg" alt="ikon" height="100px" width="100px">
+            <h2>Hvor mange procent alkohol må der højest være i en alkoholfri øl?</h2>
+            <div class="knapper">
+                <button id="forkert1">0%</button>
+                <button id="forkert2">0,2%</button>
+                <button id="rigtigt2">0,5%</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="svg/dotted-line.svg" alt="linje" height="100px">
+            <img src="svg/smag.svg" alt="ikon" height="100px" width="100px">
+            <h2>Hvad smager Tuborg Nul af?</h2>
+            <div class="knapper">
+                <button id="forkert3">130 kcal</button>
+                <button id="rigtigt3">50 kcal</button>
+                <button id="forkert4">35 kcal</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="svg/dotted-line.svg" alt="linje" height="100px">
+            <img src="svg/kcal.svg" alt="ikon" height="100px" width="100px">
+            <h2>Hvor mange kalorier er der i en Tuborg Nul?</h2>
+            <div class="knapper">
+                <button id="forkert5">130 kcal</button>
+                <button id="rigtigt4">50 kcal</button>
+                <button id="forkert6">35 kcal</button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <img src="svg/dotted-line.svg" alt="linje" height="100px">
+            <img src="svg/liter.svg" alt="ikon" height="100px" width="100px">
+            <h2>Hvilket antal liter alkoholfri øl blev der solgt i 2019?</h2>
+            <div class="knapper">
+                <button id="rigtigt5">4.699.000 liter</button>
+                <button id="forkert7">5.699.000 liter</button>
+                <button id="forkert8">6.699.000 liter</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.querySelector("#rigtigt1").addEventListener("click", klikRigtigt);
+        document.querySelector("#rigtigt2").addEventListener("click", klikRigtigt);
+        document.querySelector("#rigtigt3").addEventListener("click", klikRigtigt);
+        document.querySelector("#rigtigt4").addEventListener("click", klikRigtigt);
+        document.querySelector("#rigtigt5").addEventListener("click", klikRigtigt);
+
+        document.querySelector("#forkert1").addEventListener("click", klikForkert);
+        document.querySelector("#forkert2").addEventListener("click", klikForkert);
+        document.querySelector("#forkert3").addEventListener("click", klikForkert);
+        document.querySelector("#forkert4").addEventListener("click", klikForkert);
+        document.querySelector("#forkert5").addEventListener("click", klikForkert);
+        document.querySelector("#forkert6").addEventListener("click", klikForkert);
+        document.querySelector("#forkert7").addEventListener("click", klikForkert);
+        document.querySelector("#forkert8").addEventListener("click", klikForkert);
+        document.querySelector("#forkert9").addEventListener("click", klikForkert);
+        document.querySelector("#forkert10").addEventListener("click", klikForkert);
+
+        function klikRigtigt() {
+            this.style.backgroundColor = '#6ac16a';
+        }
+
+        function klikForkert() {
+            console.log("klikForkert");
+            this.style.backgroundColor = '#d12727';
+            this.classList.add("ryst");
+        }
+
+    </script>
+</body>
+
+</html>

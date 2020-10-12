@@ -231,6 +231,124 @@ header {
     padding-top: 150px;
 }
 
+/**popup-quiz**/
+
+/*
+#popup_quiz {
+    font-family: sans-serif;
+    overflow: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -47.5vh 0 0 -47.5vw;
+    height: 95vh;
+    width: 95vw;
+    background-color: #253d80;
+    padding: 40px 0;
+
+}
+*/
+
+#popup_quiz h1 {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+}
+
+#popup_quiz h2 {
+    margin: 30px 0;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}
+
+#popup_quiz button {
+    display: block;
+}
+
+#popup_quiz button {
+    background: #3456b5;
+    border: solid 2px white;
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    color: white;
+}
+
+#popup_quiz .container {
+    display: grid;
+    justify-items: center;
+    margin: 80px 10px 25px 10px;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    #popup_quiz butt on {
+        display: inline;
+    }
+}
+
+
+
+
+/*key frame animatiomns*/
+
+@keyframes shake_kf {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(0deg);
+    }
+}
+
+.ryst {
+    animation-name: shake_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: none;
+
+
+}
+
 /****************INFOGRAFIK****************/
 
 #infografik {
@@ -382,15 +500,18 @@ footer h1 {
     /**POPUP**/
 
     #popup_info article,
-    #popup_quiz article,
     #popup_infografik article {
         height: 80vh;
+    }
+
+    #popup_quiz article {
+        height: 676.59px;
     }
 
     #luk_info,
     #luk_quiz,
     #luk_infografik {
-        right: 70px;
+        right: 90px;
     }
 
 }
