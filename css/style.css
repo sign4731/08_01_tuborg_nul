@@ -60,6 +60,18 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #1C4D8C;
+}
+
+li:hover {
+    color: #1C4D8C;
+}
+
 
 /**********************HEADER*****************************/
 
