@@ -150,6 +150,8 @@ header {
     margin: 5vw;
     background-color: #E7E7E5;
     padding: 20px;
+    overflow: scroll;
+
 }
 
 #luk_info,
@@ -230,8 +232,6 @@ header {
 /****************QUIZ****************/
 
 #quiz {
-    width: 100vw;
-    height: 300px;
     background-color: #8DB4B7;
     /*    background-image: url(/pics/baggrund.jpg);*/
 }
@@ -245,31 +245,17 @@ header {
 
 /**popup-quiz**/
 
-/*
-#popup_quiz {
-    font-family: sans-serif;
-    overflow: scroll;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -47.5vh 0 0 -47.5vw;
-    height: 95vh;
-    width: 95vw;
-    background-color: #253d80;
-    padding: 40px 0;
-
-}
-*/
 
 #popup_quiz h1 {
-    color: white;
+    color: #1C4D8C;
     text-align: center;
-    font-weight: 300;
+    font-size: 50px;
+
 }
 
 #popup_quiz h2 {
     margin: 30px 0;
-    color: white;
+    color: #1C4D8C;
     text-align: center;
     font-weight: 100;
 }
@@ -280,11 +266,11 @@ header {
 
 #popup_quiz button {
     background: #3456b5;
-    border: solid 2px white;
     width: 300px;
     height: 40px;
     margin-top: 10px;
     color: white;
+    border: none;
 }
 
 #popup_quiz .container {
