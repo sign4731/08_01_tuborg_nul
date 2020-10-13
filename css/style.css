@@ -140,15 +140,21 @@ header {
 }
 
 #popup_info article,
-#popup_quiz article,
 #popup_infografik article {
     width: 90vw;
     height: 70vh;
     margin: 5vw;
     background-color: #E7E7E5;
     padding: 20px;
-    overflow: scroll;
+}
 
+#popup_quiz article {
+    width: 90vw;
+    height: 70vh;
+    margin: 5vw;
+    background-color: #E7E7E5;
+    padding: 20px;
+    overflow: scroll;
 }
 
 #luk_info,
