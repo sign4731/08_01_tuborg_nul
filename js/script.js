@@ -31,7 +31,7 @@ function sidenVises() {
     document.querySelector("#luk_infografik").addEventListener("click", () => popup_infografik.style.display = "none");
 
     //menuknap
-    document.querySelector("#menuknap").innerHTML = "<img src='/pics/burgermenu.svg' alt='burgermenu'/>";
+    document.querySelector("#menuknap").innerHTML = "<img src='pics/burgermenu.svg' alt='burgermenu'/>";
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
     //quiz

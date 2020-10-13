@@ -110,7 +110,7 @@ header {
     width: 150px;
     height: 37.5px;
     margin: 10px 20px;
-    background-image: url(/svg/tuborg-logo.svg);
+    background-image: url(../svg/tuborg-logo.svg);
     background-size: cover;
 }
 
@@ -156,7 +156,7 @@ header {
 #luk_infografik {
     width: 50px;
     height: 51px;
-    background-image: url(/pics/luk.png);
+    background-image: url(../pics/luk.png);
     border: none;
     background-size: cover;
     position: absolute;
@@ -294,7 +294,7 @@ video {
     height: 600px;
     /*    background-color: #F2C063;*/
     cursor: pointer;
-    background-image: url(/pics/viden_om_kampagnen.jpg);
+    background-image: url(../pics/viden_om_kampagnen.jpg);
     background-size: cover;
 }
 
@@ -328,7 +328,7 @@ video {
 }
 
 #dosetop {
-    background-image: url(/pics/dosetop.png);
+    background-image: url(../pics/dosetop.png);
     background-size: cover;
     width: 203px;
     height: 200px;
@@ -340,7 +340,7 @@ video {
 #quiz {
     /*    background-color: #8DB4B7;*/
     height: 300px;
-    background-image: url(/pics/oeldose.png);
+    background-image: url(../pics/oeldose.png);
     background-size: cover;
     cursor: pointer;
 }
@@ -471,7 +471,7 @@ video {
     width: 100vw;
     height: 300px;
     /*    background-color: #F2C48D;*/
-    background-image: url(/svg/graf.svg);
+    background-image: url(../svg/graf.svg);
     background-size: cover;
     cursor: pointer;
 }
@@ -544,21 +544,21 @@ video {
 #fb {
     width: 80px;
     height: 80px;
-    background-image: url(/svg/facebook.svg);
+    background-image: url(../svg/facebook.svg);
     background-size: cover;
 }
 
 #ig {
     width: 80px;
     height: 80px;
-    background-image: url(/svg/instagram.svg);
+    background-image: url(../svg/instagram.svg);
     background-size: cover;
 }
 
 /*****************FOOTER************************/
 
 footer #cirkusfod {
-    background-image: url(/svg/footer.svg);
+    background-image: url(../svg/footer.svg);
     background-size: cover;
     width: 300px;
     height: 108.9px;
@@ -684,7 +684,7 @@ footer #cirkusfod {
     /**splash**/
 
     #gradient {
-        top: -615px;
+        top: -586px;
     }
 
     #baggrundsvideo {
