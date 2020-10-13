@@ -205,7 +205,7 @@ video {
     left: calc(50vw - 25px);
     width: 100px;
     top: 200px;
-    display: none;
+    /*    display: none;*/
 
 }
 
@@ -491,6 +491,42 @@ video {
     visibility: show;
 }
 
+/**popup infografik**/
+
+#barchart {
+    max-width: 900px;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+#chart line {
+    stroke: #555;
+    stroke-width: 1;
+}
+
+#chart text {
+    font-size: 6px;
+    font-family: sans-serif;
+}
+
+.bars {
+    stroke-width: 20;
+    stroke: Blue;
+    opacity: 0.75;
+}
+
+#kurve {
+    stroke-width: 1.5;
+    stroke: orange;
+    fill: none;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: all 2.5s linear;
+}
+
+.years {
+    color: white;
+}
 
 /****************SOME****************/
 

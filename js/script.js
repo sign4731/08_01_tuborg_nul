@@ -1,9 +1,21 @@
 document.addEventListener("DOMContentLoaded", sidenVises)
 
+//Infografik
+// Beers sold /1.000.000 - Times 20 to accommodate Chart setup 0-100
+const values = [0, 1.071 * 20, 0.938 * 20, 2.453 * 20, 2.793 * 20, 3.283 * 20, 4.319 * 20, 4.699 * 20, 5 * 20];
+
+const total = values.reduce((sum, value) => sum + value);
+let punkter = "";
+
+document.querySelector(".bars").addEventListener("mouseout", animer);
+
+//load siden
 function sidenVises() {
 
     //BUBBLES
     visStart();
+
+    bars();
 
     //popupvinduer
     document.querySelector(".info_klikmig_menu").addEventListener("click", () => popup_info.style.display = "block");
@@ -66,6 +78,19 @@ window.addEventListener('scroll', function () {
     a.classList.toggle('scrolling_aktiv_a', windowPosition);
 })
 
+function bars() {
+
+    // Making a forEach loop through the bars and lines
+    document.querySelectorAll(".bars line").forEach((bar, i) => {
+
+        bar.setAttribute("y1", 100 - values[i]);
+        bar.setAttribute("data-value", values[i]);
+        bar.setAttribute("data-procent", values[i] / total * 100);
+
+        bar.addEventListener("mouseover", vis);
+    })
+}
+
 //BUBBLES
 function visStart() {
     document.querySelector("#bubble-1").classList.add("bubble1");
@@ -127,4 +152,27 @@ function klikForkert() {
     console.log("klikForkert");
     this.style.backgroundColor = '#d12727';
     this.classList.add("ryst");
+}
+
+//infografik
+function vis() {
+    console.log(this.dataset.value);
+
+    // Value /20 to revert earlier *20
+    document.querySelector("#output").textContent = this.dataset.value / 20 + " Millioner Liter";
+
+    // i*25 to jump next point to next bar
+    // 100-value to to invert bar startpoint
+    values.forEach((value, i) => {
+        punkter += (i * 25) + "," + (100 - value) + " ";
+    })
+    console.log(punkter);
+}
+
+function animer() {
+
+    const kurve = document.querySelector("#kurve");
+    document.querySelector("#kurve").setAttribute("points", punkter);
+    kurve.style.strokeDashoffset = 0;
+    document.querySelector(".bars").removeEventListener("mouseout", animer);
 }
