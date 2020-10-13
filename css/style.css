@@ -1,6 +1,3 @@
-@import url('https://tuborg.dk/ol/nul/css/app.css');
-
-
 /*-------- MAIN STUFF ----------*/
 
 * {
@@ -44,7 +41,7 @@ h1 {
 }
 
 h2 {
-    font-family: '';
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: #fff;
     font-size: 24px;
@@ -106,8 +103,8 @@ header {
 #menuknap {
     /*    background-image: url(/pics/burgermenu.svg);*/
     background-size: cover;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     right: 10px;
     top: 15px;
     position: absolute;
@@ -159,7 +156,7 @@ header {
 #luk_infografik {
     width: 50px;
     height: 50px;
-    background-image: url(/pics/luk.svg);
+    background-image: url(/pics/luk.png);
     border: none;
     background-size: cover;
     position: absolute;
@@ -202,14 +199,17 @@ header {
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     color: white;
+    visibility: hidden;
 }
 
 #line {
-    border-left: 2px solid white;
-    height: 150px;
     position: absolute;
-    left: 50vw;
-    top: 70px;
+    top: 50px;
+    left: 42%;
+    z-index: 2;
+    stroke: #1C4D8C;
+
+
 }
 
 
@@ -219,28 +219,45 @@ header {
     width: 100vw;
     height: 600px;
     background-color: #F2C063;
+    cursor: pointer;
     /*    background-image: url(/pics/tuborg_nul_1000x550px-4.jpg);*/
 }
 
-#info h1 {
+#info_overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.info_overlay_tekst {
     color: white;
     font-size: 30px;
     text-align: center;
     padding-top: 300px;
+    visibility: show;
 }
 
 /****************QUIZ****************/
 
 #quiz {
-    background-color: #8DB4B7;
-    /*    background-image: url(/pics/baggrund.jpg);*/
+    /*    background-color: #8DB4B7;*/
+    height: 300px;
+    background-image: url(/pics/oeldose.png);
+    cursor: pointer;
 }
 
-#quiz h1 {
+#quiz_overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.quiz_overlay_tekst {
     color: white;
     font-size: 30px;
     text-align: center;
     padding-top: 150px;
+    visibility: show;
 }
 
 /**popup-quiz**/
@@ -250,6 +267,7 @@ header {
     color: #1C4D8C;
     text-align: center;
     font-size: 50px;
+    margin-top: 70px;
 
 }
 
@@ -258,6 +276,7 @@ header {
     color: #1C4D8C;
     text-align: center;
     font-weight: 100;
+    font-family:
 }
 
 #popup_quiz button {
@@ -352,16 +371,26 @@ header {
 #infografik {
     width: 100vw;
     height: 300px;
-    background-color: #F2C48D;
-    /*    background-image: url(/pics/baggrund.jpg);*/
+    /*    background-color: #F2C48D;*/
+    background-image: url(/svg/graf.svg);
+    cursor: pointer;
 }
 
-#infografik h1 {
+#infografik_overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.infografik_overlay_tekst {
     color: white;
     font-size: 30px;
     text-align: center;
     padding-top: 150px;
+    visibility: show;
 }
+
 
 /****************SOME****************/
 
@@ -418,7 +447,7 @@ footer h1 {
     }
 
     #line {
-        height: 150px;
+        left: 45.8%;
         top: 200px;
     }
 
@@ -492,7 +521,7 @@ footer h1 {
 
     #line {
         top: 100px;
-        height: 150px;
+        left: 47%;
     }
 
     /**POPUP**/
@@ -512,10 +541,74 @@ footer h1 {
         right: 90px;
     }
 
+    /**MAIN**/
+
+    .info_overlay_tekst {
+        visibility: hidden;
+    }
+
+    #info:hover {
+        transform: scale(1.03);
+    }
+
+    #info_overlay {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #info_overlay:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    .quiz_overlay_tekst {
+        visibility: hidden;
+    }
+
+    #quiz:hover {
+        transform: scale(1.03);
+    }
+
+    #quiz_overlay {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #quiz_overlay:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    .infografik_overlay_tekst {
+        visibility: hidden;
+    }
+
+    #infografik:hover {
+        transform: scale(1.03);
+    }
+
+    #infografik_overlay {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #infografik_overlay:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+
+
+
 }
 
 @media(min-width: 1400px) {
     #scroll {
         margin-left: 47.5vw;
     }
+
+    #line {
+        left: 47.8%;
+    }
+}
+
+.visible {
+    visibility: visible;
 }

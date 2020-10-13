@@ -18,7 +18,7 @@ function sidenVises() {
     document.querySelector("#menuknap").innerHTML = "<img src='/pics/burgermenu.svg' alt='burgermenu'/>";
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
-
+    //quiz
     document.querySelector("#rigtigt1").addEventListener("click", klikRigtigt);
     document.querySelector("#rigtigt2").addEventListener("click", klikRigtigt);
     document.querySelector("#rigtigt3").addEventListener("click", klikRigtigt);
@@ -35,6 +35,14 @@ function sidenVises() {
     document.querySelector("#forkert8").addEventListener("click", klikForkert);
     document.querySelector("#forkert9").addEventListener("click", klikForkert);
     document.querySelector("#forkert10").addEventListener("click", klikForkert);
+
+    //teskt på firkanter på forsiden
+    document.querySelector("#quiz").addEventListener("mouseover", visTekstQuiz);
+    document.querySelector("#quiz").addEventListener("mouseout", fjernTekstQuiz);
+    document.querySelector("#info").addEventListener("mouseover", visTekstInfo);
+    document.querySelector("#info").addEventListener("mouseout", fjernTekstInfo);
+    document.querySelector("#infografik").addEventListener("mouseover", visTekstInfografik);
+    document.querySelector("#infografik").addEventListener("mouseout", fjernTekstInfografik);
 }
 
 
@@ -52,7 +60,37 @@ function toggleMenu() {
 
 }
 
+//vis tekster på firkanter på forsiden
+function visTekstQuiz() {
+    console.log("quiz");
+    document.querySelector(".quiz_overlay_tekst").classList.add("visible");
+}
 
+function fjernTekstQuiz() {
+    document.querySelector(".quiz_overlay_tekst").classList.remove("visible");
+}
+
+function visTekstInfo() {
+    console.log("info");
+    document.querySelector(".info_overlay_tekst").classList.add("visible");
+}
+
+function fjernTekstInfo() {
+    document.querySelector(".info_overlay_tekst").classList.remove("visible");
+}
+
+function visTekstInfografik() {
+    console.log("tekst");
+    document.querySelector(".infografik_overlay_tekst").classList.add("visible");
+}
+
+function fjernTekstInfografik() {
+    document.querySelector(".infografik_overlay_tekst").classList.remove("visible");
+}
+
+
+
+//quiz
 function klikRigtigt() {
     this.style.backgroundColor = '#6ac16a';
 }
