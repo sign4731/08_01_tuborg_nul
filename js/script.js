@@ -43,8 +43,24 @@ function sidenVises() {
     document.querySelector("#info").addEventListener("mouseout", fjernTekstInfo);
     document.querySelector("#infografik").addEventListener("mouseover", visTekstInfografik);
     document.querySelector("#infografik").addEventListener("mouseout", fjernTekstInfografik);
+
 }
 
+window.addEventListener('scroll', function () {
+    console.log("scroll");
+    let header = document.querySelector('header');
+    let li1 = document.querySelector('.info_klikmig_menu');
+    let li2 = document.querySelector('.quiz_klikmig_menu');
+    let li3 = document.querySelector('.infografik_klikmig_menu');
+    let a = document.querySelector('.videoportfolio_menu');
+
+    let windowPosition = window.scrollY > 0;
+    header.classList.toggle('scrolling_aktiv', windowPosition);
+    li1.classList.toggle('scrolling_aktiv_a', windowPosition);
+    li2.classList.toggle('scrolling_aktiv_a', windowPosition);
+    li3.classList.toggle('scrolling_aktiv_a', windowPosition);
+    a.classList.toggle('scrolling_aktiv_a', windowPosition);
+})
 
 //basic burgermenu
 function toggleMenu() {

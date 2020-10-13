@@ -17,6 +17,7 @@ body {
 
 header {
     margin: 0 auto;
+    transition: .5s;
 }
 
 main {
@@ -36,8 +37,6 @@ h1 {
     font-weight: 500;
     color: #000;
     font-size: 20px;
-
-
 }
 
 h2 {
@@ -114,10 +113,11 @@ header {
 #logo {
     display: none;
     font-size: 50px;
-    color: #1C4D8C;
-    font-family: 'Roboto', sans-serif;
+    width: 150px;
+    height: 37.5px;
     margin: 10px 20px;
-
+    background-image: url(/svg/tuborg-logo.svg);
+    background-size: cover;
 }
 
 .hidden {
@@ -155,7 +155,7 @@ header {
 #luk_quiz,
 #luk_infografik {
     width: 50px;
-    height: 50px;
+    height: 51px;
     background-image: url(/pics/luk.png);
     border: none;
     background-size: cover;
@@ -218,9 +218,10 @@ header {
 #info {
     width: 100vw;
     height: 600px;
-    background-color: #F2C063;
+    /*    background-color: #F2C063;*/
     cursor: pointer;
-    /*    background-image: url(/pics/tuborg_nul_1000x550px-4.jpg);*/
+    background-image: url(/pics/viden_om_kampagnen.jpg);
+    background-size: cover;
 }
 
 #info_overlay {
@@ -237,12 +238,28 @@ header {
     visibility: show;
 }
 
+/**popup**/
+
+#popup_info h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 70px 0 70px;
+    color: #1C4D8C;
+}
+
+#popup_info p {
+    color: #1C4D8C;
+    margin: 0 40px;
+
+}
+
 /****************QUIZ****************/
 
 #quiz {
     /*    background-color: #8DB4B7;*/
     height: 300px;
     background-image: url(/pics/oeldose.png);
+    background-size: cover;
     cursor: pointer;
 }
 
@@ -373,6 +390,7 @@ header {
     height: 300px;
     /*    background-color: #F2C48D;*/
     background-image: url(/svg/graf.svg);
+    background-size: cover;
     cursor: pointer;
 }
 
@@ -408,24 +426,54 @@ header {
 #fb {
     width: 80px;
     height: 80px;
-    background-image: url(/pics/facebook_logos_PNG19751.png);
+    background-image: url(/svg/facebook.svg);
     background-size: cover;
 }
 
 #ig {
     width: 80px;
     height: 80px;
-    background-image: url(/pics/instagram-logo-png-2428.png);
+    background-image: url(/svg/instagram.svg);
     background-size: cover;
 }
 
 /*****************FOOTER************************/
 
-footer h1 {
-    font-size: 50px;
+footer #cirkusfod {
+    background-image: url(/svg/footer.svg);
+    background-size: cover;
+    width: 300px;
+    height: 108.9px;
+    margin: 100px auto 50px;
+}
+
+/****************VIDEOPORTFOLIO******************/
+
+
+#videoportfolio {
+    display: flex;
+    flex-direction: column;
+}
+
+#videoportfolio h1 {
     color: #1C4D8C;
     text-align: center;
-    margin: 50px 50px;
+    font-size: 50px;
+    margin-top: 70px;
+}
+
+#videoportfolio iframe {
+    align-self: center;
+}
+
+#videoportfolio a {
+    color: #1C4D8C;
+}
+
+#videoportfolio h2 {
+    color: #1C4D8C;
+    align-self: center;
+    margin: 70px 0 0;
 }
 
 /********************MEDIAQUERIES*****************/
@@ -456,8 +504,9 @@ footer h1 {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(2, minmax(379px, 1fr));
-        padding-top: 85px;
-        max-width: 768px;
+        padding-top: 160px;
+        /*        max-width: 768px;*/
+        max-width: 1000px;
         margin: auto;
         overflow: hidden;
     }
@@ -512,6 +561,19 @@ footer h1 {
         display: block;
     }
 
+    /**menu efter scroll**/
+
+    .scrolling_aktiv {
+        background-color: #1C4D8C;
+        height: 60px;
+        transition: .5s;
+    }
+
+    .scrolling_aktiv_a:hover {
+        color: #8DB4B7;
+    }
+
+
     /**SCROLL**/
 
     #scroll {
@@ -543,59 +605,49 @@ footer h1 {
 
     /**MAIN**/
 
-    .info_overlay_tekst {
-        visibility: hidden;
-    }
-
-    #info:hover {
-        transform: scale(1.03);
-    }
-
-    #info_overlay {
-        background-color: rgba(255, 255, 255, 0);
-    }
-
-    #info_overlay:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 2;
-    }
-
-    .quiz_overlay_tekst {
-        visibility: hidden;
-    }
-
-    #quiz:hover {
-        transform: scale(1.03);
-    }
-
-    #quiz_overlay {
-        background-color: rgba(255, 255, 255, 0);
-    }
-
-    #quiz_overlay:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 2;
-    }
-
+    .info_overlay_tekst,
+    .quiz_overlay_tekst,
     .infografik_overlay_tekst {
         visibility: hidden;
     }
 
+    #info:hover,
+    #quiz:hover,
     #infografik:hover {
         transform: scale(1.03);
     }
 
+    #info_overlay,
+    #quiz_overlay,
     #infografik_overlay {
         background-color: rgba(255, 255, 255, 0);
     }
 
+    #info_overlay:hover,
+    #quiz_overlay:hover,
     #infografik_overlay:hover {
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 2;
     }
 
+    #info {
+        height: 796px;
+        width: 495px;
+    }
 
+    #quiz {
+        width: 495px;
+        height: 393px;
+    }
 
+    #infografik {
+        width: 495px;
+        height: 393px;
+    }
+
+    #soMe {
+        width: 1000px;
+    }
 
 }
 
@@ -609,6 +661,8 @@ footer h1 {
     }
 }
 
+
+/************class til js************/
 .visible {
     visibility: visible;
 }
