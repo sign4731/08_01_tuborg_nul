@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<style>
+    #bubble-container {
+        position: relative;
+    }
+
+    #bubble-1 {
+        position: absolute;
+        top: 0;
+    }
+
+    #bubble-2 {
+        position: absolute;
+        top: 20px;
+    }
+
+    #bubble-3 {
+        position: absolute;
+        top: 55px;
+    }
+
+    #bubble-4 {
+        position: absolute;
+        top: 100px;
+    }
+
+
+    @keyframes bubble_kf {
+        0% {
+            transform: scale(1);
+        }
+
+
+        100% {
+            transform: scale(1.3);
+        }
+
+    }
+
+    .bubble1 {
+        animation-name: bubble_kf;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: center;
+        animation-direction: alternate;
+
+
+    }
+
+    .bubble2 {
+        animation-name: bubble_kf;
+        animation-delay: 0.5s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: center;
+        animation-direction: alternate;
+
+
+    }
+
+    .bubble3 {
+        animation-name: bubble_kf;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: center;
+        animation-direction: alternate;
+
+
+    }
+
+    .bubble4 {
+        animation-name: bubble_kf;
+        animation-delay: 1.5s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: center;
+        animation-direction: alternate;
+
+
+    }
+</style>
+
+<body>
+
+    <div id="bubble-container">
+        <img id="bubble-1" src="bubble-1.svg" width="50px;">
+        <img id="bubble-2" src="bubble-2.svg" width="50px;">
+        <img id="bubble-3" src="bubble-3.svg" width="50px;">
+        <img id="bubble-4" src="bubble-4.svg" width="50px;">
+    </div>
+
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("sidenVises");
+            visStart();
+        }
+
+        function visStart() {
+            document.querySelector("#bubble-1").classList.add("bubble1");
+            document.querySelector("#bubble-2").classList.add("bubble2");
+            document.querySelector("#bubble-3").classList.add("bubble3");
+            document.querySelector("#bubble-4").classList.add("bubble4");
+        }
+    </script>
+</body></html>

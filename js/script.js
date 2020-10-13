@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", sidenVises)
 
 function sidenVises() {
+
+    //BUBBLES
+    visStart();
+
     //popupvinduer
     document.querySelector(".info_klikmig_menu").addEventListener("click", () => popup_info.style.display = "block");
     document.querySelector(".info_klikmig").addEventListener("click", () => popup_info.style.display = "block");
@@ -61,6 +65,14 @@ window.addEventListener('scroll', function () {
     li3.classList.toggle('scrolling_aktiv_a', windowPosition);
     a.classList.toggle('scrolling_aktiv_a', windowPosition);
 })
+
+//BUBBLES
+function visStart() {
+    document.querySelector("#bubble-1").classList.add("bubble1");
+    document.querySelector("#bubble-2").classList.add("bubble2");
+    document.querySelector("#bubble-3").classList.add("bubble3");
+    document.querySelector("#bubble-4").classList.add("bubble4");
+}
 
 //basic burgermenu
 function toggleMenu() {
