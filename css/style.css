@@ -24,7 +24,6 @@ main {
     padding: ;
 }
 
-
 img {
     max-width: 100%;
     display: block;
@@ -257,6 +256,14 @@ header {
     color: #1C4D8C;
     margin: 0 40px;
 
+}
+
+#dosetop {
+    background-image: url(/pics/dosetop.png);
+    background-size: cover;
+    width: 203px;
+    height: 200px;
+    margin: 50px auto;
 }
 
 /****************QUIZ****************/
