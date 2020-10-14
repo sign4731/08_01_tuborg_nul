@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     background-color: #E7E7E5;
     margin: 0;
@@ -26,7 +26,7 @@ img {
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: Extra-bold;
     font-weight: 500;
     color: #000;
@@ -34,7 +34,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #fff;
     font-size: 24px;
@@ -42,12 +42,17 @@ h2 {
 
 p {
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat';
     font-size: 16px;
+}
+
+nav a:link {
+    color: white;
 }
 
 a {
     text-decoration: none;
+    font-family: 'Montserrat';
 }
 
 a:visited {
@@ -58,10 +63,19 @@ a:hover {
     color: #1C4D8C;
 }
 
-li:hover {
-    color: #1C4D8C;
+/**********************FONTS*****************************/
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/montserrat-regular-webfont.woff") format("woff");
+    src: url("../fonts/montserrat-regular-webfont.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "Patua_one";
+    src: url("../fonts/patuaone-regular-webfont.woff") format("woff");
+    src: url("../fonts/patuaone-regular-webfont.woff2") format("woff2");
+}
 
 /**********************HEADER*****************************/
 
@@ -154,13 +168,25 @@ header {
 #luk_info,
 #luk_quiz,
 #luk_infografik {
-    width: 50px;
-    height: 51px;
+    width: 30px;
+    height: 30px;
     background-image: url(../pics/luk.png);
     border: none;
     background-size: cover;
     position: absolute;
-    right: 50px;
+    right: 10vw;
+}
+
+.pop_left {
+    display: block;
+    width: 60%;
+    margin: 15px;
+}
+
+.pop_right {
+    display: block;
+    width: 30%;
+    margin: 15px;
 }
 
 /********************BAGGRUNDSVIDEO**********************/
@@ -169,7 +195,7 @@ header {
 #baggrundsvideo {
     /*    background-color: aqua;*/
     width: 100vw;
-    height: 400px;
+    height: 240px;
 }
 
 video {
@@ -190,7 +216,7 @@ video {
 
 #gradient {
     width: 100vw;
-    height: 30vh;
+    height: 28.5vh;
     background-image: linear-gradient(rgba(231, 231, 229, 0), #E7E7E5);
     z-index: 1;
     position: relative;
@@ -204,9 +230,8 @@ video {
     position: absolute;
     left: calc(50vw - 25px);
     width: 100px;
-    top: 200px;
-    /*    display: none;*/
-
+        top: 22.5vh;
+    display: none;
 }
 
 #bubble-1 {
@@ -232,7 +257,7 @@ video {
 
 @keyframes bubble_kf {
     0% {
-        transform: scale(1);
+        transform: scale(.5);
     }
 
 
@@ -596,14 +621,32 @@ footer #cirkusfod {
 
 /********************MEDIAQUERIES*****************/
 
+
 /*************IPAD***********/
 @media(min-width: 768px) {
 
 
     /**TOP**/
+
+    #baggrundsvideo {
+    /*    background-color: aqua;*/
+    width: 100vw;
+    height: 600px;
+}
+
     #menuknap {
         width: 90px;
         height: 90px;
+    }
+
+    #gradient {
+        height: 28.5vh;
+    }
+
+    #bubble-container {
+        top: 200px;
+        display: block;
+
     }
 
 
@@ -612,7 +655,7 @@ footer #cirkusfod {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(2, minmax(379px, 1fr));
-        padding-top: -200px;
+        padding-top: 0px;
         /*        max-width: 768px;*/
         max-width: 1000px;
         margin: auto;
@@ -643,12 +686,25 @@ footer #cirkusfod {
         grid-row: 3/4;
         width: 768px;
     }
+
+
 }
 
-/***********WEB***************/
+/***********WEB MEDIUM***************/
 @media(min-width: 1024px) {
 
     /**MENU**/
+
+    #baggrundsvideo {
+    /*    background-color: aqua;*/
+    width: 100vw;
+    height: 780px;
+}
+
+    main {
+       padding-top: 100px;
+    }
+
     #menuknap {
         display: none;
     }
@@ -684,13 +740,12 @@ footer #cirkusfod {
     /**splash**/
 
     #gradient {
-        top: -586px;
+        height: 28.5vh;
     }
 
-    #baggrundsvideo {
-        /* background-color: aqua; */
-        width: 100vw;
-        height: 1000px;
+    #bubble-container {
+        top: 22.5vh;
+        display: block;
     }
 
     /**POPUP**/
@@ -756,6 +811,18 @@ footer #cirkusfod {
         width: 1000px;
     }
 
+}
+
+@media(min-width: 1300px) {
+        main {
+       padding-top: 200px;
+    }
+
+    #luk_info,
+#luk_quiz,
+#luk_infografik {
+    right: 8vw;
+}
 }
 
 /************class til js************/

@@ -7,6 +7,7 @@
     <title>Tuborg Nul Gruppe 11</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -30,21 +31,27 @@
 
     <section id="baggrundsvideo">
         <div id="video">
-
             <video poster="" autoplay="" muted="" loop="">
                 <source src=" videoer/test.mp4" type="video/mp4">
             </video>
-
         </div>
 
         <h1 id="videotekst">#KNAPOPFORMULIGHEDERNE</h1>
 
         <div id="gradient">
             <div id="bubble-container">
-                <img id="bubble-1" src="svg/bubble-1.svg" width="50px;">
-                <img id="bubble-2" src="svg/bubble-2.svg" width="50px;">
-                <img id="bubble-3" src="svg/bubble-3.svg" width="50px;">
-                <img id="bubble-4" src="svg/bubble-4.svg" width="50px;">
+                <div>
+                    <img id="bubble-1" src="svg/bubble-1.svg" width="50px;">
+                </div>
+                <div>
+                    <img id="bubble-2" src="svg/bubble-2.svg" width="50px;">
+                </div>
+                <div>
+                    <img id="bubble-3" src="svg/bubble-3.svg" width="50px;">
+                </div>
+                <div>
+                    <img id="bubble-4" src="svg/bubble-4.svg" width="50px;">
+                </div>
             </div>
         </div>
 
@@ -131,54 +138,55 @@
         <section id="popup_infografik">
             <article>
                 <div id="luk_infografik"></div>
+                <div class="pop_left">
+                    <svg id="barchart" viewbox="-20 -20 230 120">
+                        <g id="chart">
+                            <text x="-4" y="-15">Liter alkoholfri øl solgt siden 2013</text>
+                            <text x="-2" y="-3">5 millioner</text>
+                            <text x="-2" y="17">4 millioner</text>
+                            <text x="-2" y="37">3 millioner</text>
+                            <text x="-2" y="57">2 millioner</text>
+                            <text x="-2" y="77">1 millioner</text>
+                            <text x="-2" y="97">0 </text>
 
-                <svg id="barchart" viewbox="-20 -20 230 120">
-                    <g id="chart">
-                        <text x="-4" y="-15">Liter alkoholfri øl solgt siden 2013</text>
-                        <text x="-2" y="-3">5 millioner</text>
-                        <text x="-2" y="17">4 millioner</text>
-                        <text x="-2" y="37">3 millioner</text>
-                        <text x="-2" y="57">2 millioner</text>
-                        <text x="-2" y="77">1 millioner</text>
-                        <text x="-2" y="97">0 </text>
+                            <line x1="-5" x2="-5" y1="100" y2="0" />
+                            <line x1="-5" x2="210" y1="0" y2="0" />
+                            <line x1="-5" x2="210" y1="20" y2="20" />
+                            <line x1="-5" x2="210" y1="40" y2="40" />
+                            <line x1="-5" x2="210" y1="60" y2="60" />
+                            <line x1="-5" x2="210" y1="80" y2="80" />
+                            <line x1="-5" x2="210" y1="100" y2="100" />
+                            <line x1="210" x2="210" y1="0" y2="100" />
 
-                        <line x1="-5" x2="-5" y1="100" y2="0" />
-                        <line x1="-5" x2="210" y1="0" y2="0" />
-                        <line x1="-5" x2="210" y1="20" y2="20" />
-                        <line x1="-5" x2="210" y1="40" y2="40" />
-                        <line x1="-5" x2="210" y1="60" y2="60" />
-                        <line x1="-5" x2="210" y1="80" y2="80" />
-                        <line x1="-5" x2="210" y1="100" y2="100" />
-                        <line x1="210" x2="210" y1="0" y2="100" />
-
-                        <g class="years">
-                            <text x="20" y="97">2013</text>
-                            <text x="45" y="97">2015</text>
-                            <text x="70" y="97">2014</text>
-                            <text x="95" y="97">2016</text>
-                            <text x="120" y="97">2017</text>
-                            <text x="145" y="97">2018</text>
-                            <text x="170" y="97">2019</text>
-                            <text x="195" y="90"> Exp.</text>
-                            <text x="195" y="97">2020</text>
+                            <g class="years">
+                                <text x="20" y="97">2013 </text>
+                                <text x="45" y="97">2014 </text>
+                                <text x="70" y="97">2015 </text>
+                                <text x="95" y="97">2016 </text>
+                                <text x="120" y="97">2017 </text>
+                                <text x="145" y="97">2018 </text>
+                                <text x="170" y="97">2019 </text>
+                                <text x="195" y="90"> Exp. </text>
+                                <text x="195" y="97">2020 </text>
+                            </g>
                         </g>
-                    </g>
-                    <g class="bars">
-                        <line x1="0" x2="0" y1="100" y2="100" />
-                        <line x1="25" x2="25" y1="20" y2="100" />
-                        <line x1="50" x2="50" y1="20" y2="100" />
-                        <line x1="75" x2="75" y1="20" y2="100" />
-                        <line x1="100" x2="100" y1="20" y2="100" />
-                        <line x1="125" x2="125" y1="20" y2="100" />
-                        <line x1="150" x2="150" y1="20" y2="100" />
-                        <line x1="175" x2="175" y1="20" y2="100" />
-                        <line x1="200" x2="200" y1="20" y2="100" />
-                    </g>
-
-                    <polyline id="kurve" pathlength="1" points="" />
-
-                </svg>
-                <p id="output"></p>
+                        <g class="bars">
+                            <line x1="0" x2="0" y1="100" y2="100" />
+                            <line x1="25" x2="25" y1="20" y2="100" />
+                            <line x1="50" x2="50" y1="20" y2="100" />
+                            <line x1="75" x2="75" y1="20" y2="100" />
+                            <line x1="100" x2="100" y1="20" y2="100" />
+                            <line x1="125" x2="125" y1="20" y2="100" />
+                            <line x1="150" x2="150" y1="20" y2="100" />
+                            <line x1="175" x2="175" y1="20" y2="100" />
+                            <line x1="200" x2="200" y1="20" y2="100" />
+                        </g>
+                        <polyline id="kurve" pathlength="1" points="" />
+                    </svg>
+                </div>
+                <div class="pop_right">
+                    <p id="output"></p>
+                </div>
             </article>
         </section>
 
@@ -215,6 +223,4 @@
         <div id="cirkusfod"></div>
     </footer>
     <script src="js/script.js"></script>
-</body>
-
-</html>
+</body></html>
