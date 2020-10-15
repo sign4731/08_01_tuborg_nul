@@ -50,6 +50,10 @@ nav a:link {
     color: white;
 }
 
+nav li:hover {
+    color: #1C4D8C;
+}
+
 a {
     text-decoration: none;
     font-family: 'Montserrat';
