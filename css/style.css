@@ -156,6 +156,13 @@ header {
     padding: 20px;
 }
 
+#popup_infografik article {
+    width: 90vw;
+    align-content: center;
+    margin: 20 auto;
+        height: 60vh;
+}
+
 #popup_quiz article {
     width: 90vw;
     height: 70vh;
@@ -179,14 +186,14 @@ header {
 
 .pop_left {
     display: block;
-    width: 60%;
-    margin: 15px;
+    width: 100%;
+    margin: 20px 20px 0 -15px;
 }
 
 .pop_right {
-    display: block;
-    width: 30%;
-    margin: 15px;
+    display: ;
+    justify-content: ;
+    padding: 0 0px 0 0;
 }
 
 /********************BAGGRUNDSVIDEO**********************/
@@ -530,8 +537,13 @@ video {
 }
 
 #chart text {
-    font-size: 6px;
-    font-family: sans-serif;
+    font-size: 7px;
+    font-family: "Montserrat";
+}
+
+#chart text:first-child {
+    font-style: oblique;
+    text-shadow: 0 0 blue;
 }
 
 .bars {
@@ -541,7 +553,7 @@ video {
 }
 
 #kurve {
-    stroke-width: 1.5;
+    stroke-width: 1.8;
     stroke: orange;
     fill: none;
     stroke-dasharray: 1;
@@ -549,8 +561,18 @@ video {
     transition: all 2.5s linear;
 }
 
-.years {
-    color: white;
+.pop_right #output {
+display: flex;
+    justify-content: center;
+    margin: 25px 0 0 50px;
+    font-family: "Patua_one";
+    font-size: 1.4em;
+}
+
+.years text {
+    text-shadow: 0 0 black;
+    position: absolute;
+    transform: skewY(-22deg);
 }
 
 /****************SOME****************/
@@ -625,7 +647,18 @@ footer #cirkusfod {
 /*************IPAD***********/
 @media(min-width: 768px) {
 
+    /**INFOGRAF**/
 
+    #popup_infografik article {
+    width: 90vw;
+    align-content: center;
+    margin: 20 auto;
+        height: 70vh;
+}
+
+        #luk_infografik {
+    right: 10vw;
+}
     /**TOP**/
 
     #baggrundsvideo {
@@ -692,6 +725,18 @@ footer #cirkusfod {
 
 /***********WEB MEDIUM***************/
 @media(min-width: 1024px) {
+
+        /**INFOGRAF**/
+
+    #popup_infografik article {
+    width: 80vw;
+    align-content: center;
+    margin: 5vw auto;
+        height: 90vh;
+}
+            #luk_infografik {
+    right: 20vw;
+}
 
     /**MENU**/
 
@@ -824,8 +869,11 @@ footer #cirkusfod {
     right: 8vw;
 }
 }
-
+        #luk_infografik {
+    right: 12vw;
+}
 /************class til js************/
 .visible {
     visibility: visible;
 }
+
