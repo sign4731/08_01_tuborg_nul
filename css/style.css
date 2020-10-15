@@ -164,7 +164,7 @@ header {
     width: 90vw;
     align-content: center;
     margin: 20 auto;
-        height: 60vh;
+    height: 60vh;
 }
 
 #popup_quiz article {
@@ -241,7 +241,7 @@ video {
     position: absolute;
     left: calc(50vw - 25px);
     width: 100px;
-        top: 22.5vh;
+    top: 22.5vh;
     display: none;
 }
 
@@ -566,7 +566,7 @@ video {
 }
 
 .pop_right #output {
-display: flex;
+    display: flex;
     justify-content: center;
     margin: 25px 0 0 50px;
     font-family: "Patua_one";
@@ -654,22 +654,23 @@ footer #cirkusfod {
     /**INFOGRAF**/
 
     #popup_infografik article {
-    width: 90vw;
-    align-content: center;
-    margin: 20 auto;
+        width: 90vw;
+        align-content: center;
+        margin: 20 auto;
         height: 70vh;
-}
+    }
 
-        #luk_infografik {
-    right: 10vw;
-}
+    #luk_infografik {
+        right: 10vw;
+    }
+
     /**TOP**/
 
     #baggrundsvideo {
-    /*    background-color: aqua;*/
-    width: 100vw;
-    height: 600px;
-}
+        /*    background-color: aqua;*/
+        width: 100vw;
+        height: 600px;
+    }
 
     #menuknap {
         width: 90px;
@@ -730,28 +731,29 @@ footer #cirkusfod {
 /***********WEB MEDIUM***************/
 @media(min-width: 1024px) {
 
-        /**INFOGRAF**/
+    /**INFOGRAF**/
 
     #popup_infografik article {
-    width: 80vw;
-    align-content: center;
-    margin: 5vw auto;
+        width: 80vw;
+        align-content: center;
+        margin: 5vw auto;
         height: 90vh;
-}
-            #luk_infografik {
-    right: 20vw;
-}
+    }
+
+    #luk_infografik {
+        right: 20vw;
+    }
 
     /**MENU**/
 
     #baggrundsvideo {
-    /*    background-color: aqua;*/
-    width: 100vw;
-    height: 780px;
-}
+        /*    background-color: aqua;*/
+        width: 100vw;
+        height: 780px;
+    }
 
     main {
-       padding-top: 100px;
+        padding-top: 100px;
     }
 
     #menuknap {
@@ -863,21 +865,21 @@ footer #cirkusfod {
 }
 
 @media(min-width: 1300px) {
-        main {
-       padding-top: 200px;
+    main {
+        padding-top: 200px;
     }
 
     #luk_info,
-#luk_quiz,
-#luk_infografik {
-    right: 8vw;
-}
-}
-        #luk_infografik {
-    right: 12vw;
-}
-/************class til js************/
-.visible {
-    visibility: visible;
-}
+    #luk_quiz,
+    #luk_infografik {
+        right: 8vw;
+    }
 
+    #luk_infografik {
+        right: 12vw;
+    }
+
+    /************class til js************/
+    .visible {
+        visibility: visible;
+    }
