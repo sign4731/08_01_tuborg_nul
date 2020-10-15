@@ -108,7 +108,7 @@ function toggleMenu() {
     if (erSkjult == true) {
         document.querySelector("#menuknap").innerHTML = "<img src='../pics/burgermenu.svg' alt='burgermenu'/>";
     } else {
-        document.querySelector("#menuknap").innerHTML = "<img src='../pics/luk.png' alt='burgermenuluk'/>";
+        document.querySelector("#menuknap").innerHTML = "<img src='../pics/burgermenuLuk.svg' alt='burgermenuluk'/>";
     }
 
 }
